@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["maven", "jdk17"]
+
+[phases.build]
+cmds = [
+  "chmod +x ./mvnw",
+  "./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"
+]
+
+[start]
+cmd = "java -jar target/*.jar"
