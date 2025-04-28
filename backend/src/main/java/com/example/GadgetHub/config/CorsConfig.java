@@ -16,7 +16,7 @@ public class CorsConfig {
                     .allowedOrigins(
                         "http://localhost:5173", 
                         "http://localhost:3000",
-                        "https://ccsgadgethub.onrender.com"
+                        "https://ccs-gadget-hub-frontend-ae41.vercel.app"
                     )
                     .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                     .allowedHeaders("*")
