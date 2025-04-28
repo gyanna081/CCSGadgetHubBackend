@@ -9,22 +9,25 @@ import java.nio.file.Paths;
 
 @Configuration
 public class WebMvcConfig implements WebMvcConfigurer {
-
+    
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         Path uploadDir = Paths.get("uploads");
         String uploadPath = uploadDir.toFile().getAbsolutePath();
         uploadDir.toFile().mkdirs();
-
+        
         registry.addResourceHandler("/uploads/**")
                 .addResourceLocations("file:" + uploadPath + "/")
                 .setCachePeriod(0);
     }
-
+    
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173") // ✅ Match Vite frontend
+                .allowedOrigins(
+                    "http://localhost:5173",
+                    "https://ccs-gadget-hub-frontend-ae41.vercel.app"
+                ) // Added Vercel frontend URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true)
