@@ -25,7 +25,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins(
-                    "http://localhost:5173",
+                    
                     "https://ccsgadgethub.onrender.com"
                 ) // Added Vercel frontend URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
