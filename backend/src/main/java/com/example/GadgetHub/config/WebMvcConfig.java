@@ -26,7 +26,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins(
                     "http://localhost:5173",
-                    "https://ccs-gadget-hub-frontend-ae41.vercel.app"
+                    "https://ccsgadgethub.onrender.com"
                 ) // Added Vercel frontend URL
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")

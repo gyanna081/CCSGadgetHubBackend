@@ -17,7 +17,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/items")
-@CrossOrigin(origins = {"http://localhost:5173", "https://ccs-gadget-hub-frontend-ae41.vercel.app"}, allowCredentials = "true")
+@CrossOrigin(origins = {"http://localhost:5173", "https://ccsgadgethub.onrender.com"}, allowCredentials = "true")
 public class ItemController {
 
     private final ItemService itemService;
