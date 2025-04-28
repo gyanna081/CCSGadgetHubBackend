@@ -1,15 +1,23 @@
-[build]
+
+[
+build
+]
 builderPath = "./backend"
 
-[phases.setup]
+[
+phases.setup
+]
 nixPkgs = ["maven", "jdk17"]
 
-[phases.build]
+[
+phases.build
+]
 cmds = [
-  "cd backend",
-  "chmod +x ./mvnw",
+  "chmod +x mvnw",
   "./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"
 ]
 
-[start]
-cmd = "cd backend && java -jar target/*.jar"
+[
+start
+]
+cmd = "java -jar target/*.jar"
