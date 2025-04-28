@@ -1,4 +1,3 @@
-
 [
 build
 ]
@@ -12,10 +11,7 @@ nixPkgs = ["maven", "jdk17"]
 [
 phases.build
 ]
-cmds = [
-  "chmod +x mvnw",
-  "./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"
-]
+cmds = ["chmod +x mvnw", "./mvnw -DoutputFile=target/mvn-dependency-list.log -B -DskipTests clean dependency:list install"]
 
 [
 start
