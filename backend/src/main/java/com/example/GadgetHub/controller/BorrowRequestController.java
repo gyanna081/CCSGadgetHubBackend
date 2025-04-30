@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutionException;
 
 @RestController
 @RequestMapping("/api/requests")  // Changed from "/api/borrow/requests" to match frontend
-@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
+@CrossOrigin(origins = "https://ccsgadgethub.onrender.com", allowCredentials = "true")
 public class BorrowRequestController {
 
     private final BorrowRequestService borrowRequestService;
